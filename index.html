@@ -371,7 +371,7 @@
         <div>
             <form>
                 <label>
-                    <input type="email">
+                    <input type="email" name="email">
                 </label>
             </form>
             <button>Subscribe</button>
@@ -386,36 +386,41 @@
                     <use href="./images/icons.svg#close-icon"></use>
                 </svg>
             </button>
-            <strong>Leave your contacts and we will call you back</strong>
-            <form>
-                <label>
-                    <input type="text">
-                    Name
-                </label>
-            </form>
-            <form>
-                <label>
-                    <input type="tel">
-                    Phone
-                </label>
-            </form>
-            <form>
-                <label>
-                    <input type="email">
-                    Email
-                </label>
-            </form>
-            <textarea>
-                
-            </textarea>
-            <form>
-                <label>
-                    <input type="checkbox">
-                    I accept the terms and conditions of the Privacy Policy
-                </label>
-            </form>
-            <button>Send</button>
             
+            <form class="modal-form">
+                <strong class="modal-title">Leave your contacts and we will call you back</strong>
+                <label class="modal-label">
+                    <input type="text" class="modal-input" name="name" placeholder=" ">
+                    <span class="modal-label-text">Name</span>
+                    <span class="modal-icon"></span>
+                </label>
+                
+                <label class="modal-label">
+                    <input type="tel" class="modal-input" name="tel" placeholder=" ">
+                    <span class="modal-label-text">Phone</span>
+                    <span class="modal-icon"></span>
+                </label>
+                
+                <label class="modal-label">
+                    <input type="email" class="modal-input" name="email" placeholder=" ">
+                    <span class="modal-label-text">Email</span>
+                    <span class="modal-icon"></span>
+                </label>
+                
+                <label class="modal-label textarea-label">
+                    <textarea class="modal-textarea" name="comment" placeholder="Text input"></textarea>
+                    <span class="modal-label-text">Comment</span>
+                </label>
+                
+                <label class="checkbox-label">
+                    <input type="checkbox" class="modal-checkbox">
+                    <span class="modal-checkbox-text">I accept the terms and conditions of the
+                    <a href="./" class="privacy-policy">Privacy Policy</a></span>
+                </label>
+                
+                <button>Send</button>
+            </form>
+                
         </div>
     </div>
     <script src="./js/modal.js"></script>
