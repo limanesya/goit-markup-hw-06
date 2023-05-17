@@ -821,10 +821,15 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
 }
-.modal-label:focus > .modal-input {
+.modal-input:focus {
     border: 1px solid var(--accent-color);
+    outline: none;
 }
-
+.modal-input:focus .modal-icon,
+.modal-input:focus .modal-label {
+    border: 1px solid var(--accent-color);
+    outline: none;
+}
 .modal-textarea {
     padding-left: 16px;
     padding-top: 8px;
@@ -833,6 +838,8 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
     resize: none;
+
+    transition: transform var(--main-animation);
 }
 .textarea-label {
     margin-bottom: 16px;
@@ -842,6 +849,10 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
 }
 .modal-textarea + .modal-label-text {
     opacity: 0;
+}
+.modal-textarea:focus {
+    border: 1px solid var(--accent-color);
+    outline: none;
 }
 .modal-textarea:focus +.modal-label-text,
 .modal-textarea:placeholder-shown + .modal-label-text,
@@ -885,7 +896,7 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
 }
 .modal-checkbox:checked + .checkbox-icon {
     background-color: var(--accent-color);
-    background-image: url(../images/checkmark.svg);
+    background-image: url(../images/checkbox.svg);
     background-size: contain;
     background-origin: border-box;
     border-color: var(--accent-color);
